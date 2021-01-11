@@ -16,4 +16,4 @@ const withStoreService = () => (Wrapped) => {
   }
 };
 
-export default withStoreService;
+export {withStoreService};
