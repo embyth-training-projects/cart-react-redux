@@ -1,3 +1,4 @@
 import compose from './compose';
+import {updateCartItems, updateCartItem} from './cart';;
 
-export {compose};
+export {compose, updateCartItems, updateCartItem};

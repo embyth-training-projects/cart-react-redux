@@ -8,19 +8,19 @@ const CartTable = ({items, total, onIncreaseButtonClick, onDecreaseButtonClick, 
     const {id, title, count, total} = item;
 
     return (
-      <tr key={id}>
+      <tr key={id} className="text-center">
         <td>{index + 1}</td>
         <td>{title}</td>
         <td>{count}</td>
         <td>{`${total}`}</td>
-        <td>
-          <button className="btn btn-outline-danger btn-sm float-right" onClick={() => onRemoveButtonClick(id)}>
+        <td className="text-center">
+          <button className="btn btn-outline-danger btn-sm" onClick={() => onRemoveButtonClick(id)}>
             <i className="fa fa-trash-o" />
           </button>
-          <button className="btn btn-outline-success btn-sm float-right" onClick={() => onIncreaseButtonClick(id)}>
+          <button className="btn btn-outline-success btn-sm" onClick={() => onIncreaseButtonClick(id)}>
             <i className="fa fa-plus-circle" />
           </button>
-          <button className="btn btn-outline-warning btn-sm float-right" onClick={() => onDecreaseButtonClick(id)}>
+          <button className="btn btn-outline-warning btn-sm" onClick={() => onDecreaseButtonClick(id)}>
             <i className="fa fa-minus-circle" />
           </button>
         </td>
@@ -33,7 +33,7 @@ const CartTable = ({items, total, onIncreaseButtonClick, onDecreaseButtonClick, 
       <h2>Your Order</h2>
       <table className="table">
         <thead>
-          <tr>
+          <tr className="text-center">
             <th>#</th>
             <th>Item</th>
             <th>Count</th>

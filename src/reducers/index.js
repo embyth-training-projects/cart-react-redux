@@ -1,22 +1,11 @@
+import {updateCartItems, updateCartItem} from '../utils';
+
 const initialState = {
   books: [],
   isLoading: true,
   isError: false,
   errorBody: null,
-  cartItems: [
-    {
-      id: 1,
-      title: 'Book 1',
-      count: 2,
-      total: 50,
-    },
-    {
-      id: 2,
-      title: 'Book 2',
-      count: 3,
-      total: 120,
-    },
-  ],
+  cartItems: [],
   cartTotal: 170,
 };
 
@@ -46,6 +35,18 @@ const reducer = (state = initialState, action) => {
         isError: true,
         errorBody: action.payload,
       };
+    case 'BOOK_ADDED_TO_CART':
+      const bookId = action.payload;
+      const book = state.books.find((book) => book.id === bookId);
+      const itemIndex = state.cartItems.findIndex(({id}) => id === bookId);
+      const item = state.cartItems[itemIndex];
+
+      const newItem = updateCartItem(book, item);
+
+      return {
+        ...state,
+        cartItems: updateCartItems(state.cartItems, newItem, itemIndex),
+      }
     default:
       return state;
   }

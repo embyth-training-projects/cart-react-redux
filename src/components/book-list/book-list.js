@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {withStoreService} from '../hoc';
-import {fetchBooks} from '../../actions';
+import {fetchBooks, bookAddedToCart} from '../../actions';
 import {compose} from '../../utils';
 
 import BookListItem from '../book-list-item';
@@ -11,13 +11,13 @@ import ErrorIndicator from '../error-indicator';
 
 import './book-list.css';
 
-const BookList = ({books}) => {
+const BookList = ({books, onAddToCartButtonClick}) => {
   return (
     <ul className="book-list">
       {
         books.map((book) => {
           return (
-            <li key={book.id}><BookListItem book={book} /></li>
+            <li key={book.id}><BookListItem book={book} onAddToCartButtonClick={() => onAddToCartButtonClick(book.id)} /></li>
           );
         })
       }
@@ -31,7 +31,7 @@ class BookListContainer extends Component {
   }
 
   render() {
-    const {books, isLoading, isError, errorBody} = this.props;
+    const {books, isLoading, isError, errorBody, onAddToCartButtonClick} = this.props;
 
     if (isLoading) {
       return <Spinner />;
@@ -41,7 +41,7 @@ class BookListContainer extends Component {
       return <ErrorIndicator errorBody={errorBody} />;
     }
 
-    return <BookList books={books} />;
+    return <BookList books={books} onAddToCartButtonClick={onAddToCartButtonClick} />;
   }
 }
 
@@ -51,7 +51,8 @@ const mapStateToProps = ({books, isLoading, isError, errorBody}) => {
 
 const mapDispatchToProps = (dispatch, {storeService}) => {
   return {
-    fetchBooks: fetchBooks(storeService, dispatch)
+    fetchBooks: fetchBooks(storeService, dispatch),
+    onAddToCartButtonClick: (id) => dispatch(bookAddedToCart(id)),
   };
 };
 
