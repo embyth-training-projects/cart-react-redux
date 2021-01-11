@@ -52,6 +52,8 @@ const rawBookData = [
 
 export default class BookstoreService {
   getBooks() {
-    return rawBookData;
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(rawBookData), 1000);
+    });
   }
 }
