@@ -9,7 +9,7 @@ import './app.css';
 const App = () => {
   return (
     <main role="main" className="container">
-      <StoreHeader numItems={5} total={210} />
+      <StoreHeader />
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/cart" component={CartPage} />
