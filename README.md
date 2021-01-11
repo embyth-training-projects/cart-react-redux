@@ -30,7 +30,7 @@ cd project-name
 
 ---
 
-[netlify-image]: https://api.netlify.com/api/v1/badges/13e794b4-ac1d-4a4a-9d47-3d1494eef20f/deploy-status
+[netlify-image]: https://api.netlify.com/api/v1/badges/e2dd0584-e8cf-4217-a9a9-a9f9038e0981/deploy-status
 [netlify-url]: https://app.netlify.com/sites/shopping-cart-react-redux/deploys
 [dependency-image]: https://david-dm.org/embyth/cart-react-redux/dev-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/embyth/cart-react-redux?type=dev
