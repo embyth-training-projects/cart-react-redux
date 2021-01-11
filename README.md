@@ -1,4 +1,4 @@
-# :shopping_cart: Project «Cart» with [React](https://reactjs.org/) and [Redux](https://redux.js.org/)
+# :shopping_cart: Project «Shopping Cart» with [React](https://reactjs.org/) and [Redux](https://redux.js.org/)
 
 [![Netlify Status][netlify-image]][netlify-url]
 [![Dependency status][dependency-image]][dependency-url]
@@ -7,7 +7,7 @@ Learning Redux with React on simple shopping cart logic
 
 Author: [Rostyslav Miniukov](https://github.com/embyth/)
 
-[Project Demo](https://cart-react-redux.netlify.app/)
+[Project Demo](https://shopping-cart-react-redux.netlify.app/)
 
 ---
 
@@ -31,6 +31,6 @@ cd project-name
 ---
 
 [netlify-image]: https://api.netlify.com/api/v1/badges/13e794b4-ac1d-4a4a-9d47-3d1494eef20f/deploy-status
-[netlify-url]: https://app.netlify.com/sites/cart-react-redux/deploys
+[netlify-url]: https://app.netlify.com/sites/shopping-cart-react-redux/deploys
 [dependency-image]: https://david-dm.org/embyth/cart-react-redux/dev-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/embyth/cart-react-redux?type=dev
