@@ -30,6 +30,15 @@ const CartTable = ({items, total, onIncreaseButtonClick, onDecreaseButtonClick, 
     );
   };
 
+  if (items.length === 0) {
+    return (
+      <div className="alert alert-dismissible alert-warning p-4">
+        <h4 className="alert-heading text-center mb-4">Your cart is currently empty!</h4>
+        <p className="mb-0 text-center">Use our catalog to find what you are looking for and add to your shopping cart.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="shopping-cart-table">
       <h2>Your Order</h2>
