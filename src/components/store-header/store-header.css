@@ -11,12 +11,16 @@
   padding-left: 1rem;
 }
 
+.cart-wrapper {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
 .shop-header .shopping-cart {
   align-self: center;
   font-size: 1rem;
   padding-right: 1rem;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .shop-header .shopping-cart .cart-icon {
